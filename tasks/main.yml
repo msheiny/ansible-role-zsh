@@ -1,0 +1,13 @@
+---
+- name: Ensure ZSH is installed
+  package:
+    name: zsh
+  ignore_errors: True
+
+- name: Set user's shell to zsh
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: "{{ zsh_path }}"
+
+- include: ohmyzsh.yml
+  when: zsh_ohmyzsh

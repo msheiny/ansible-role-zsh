@@ -1,0 +1,22 @@
+---
+zsh_user: "{{ ansible_user_id }}"
+zsh_path: "{{ lookup('pipe','which zsh') }}"
+
+zsh_ohmyzsh: true
+zsh_ohmyzsh_repo: https://github.com/robbyrussell/oh-my-zsh
+zsh_ohmyzsh_plugins:
+  - git
+  - gem
+  - last-working-directory
+  - pip
+  - pyenv
+  - pylint
+  - python
+  - sudo
+  - tmux
+  - vagrant
+  - virtualenvwrapper
+  - dnf
+  - ssh-agent
+  - docker
+  - tmux
